@@ -1,0 +1,9 @@
+.env
+.idea
+db.sqlite3
+ApiIFPBProfessoresTSI/api/migrations/__pycache__/
+ApiIFPBProfessoresTSI/api/__pycache__/
+ApiIFPBProfessoresTSI/__pycache__/
+media/
+.vscode/
+env/
