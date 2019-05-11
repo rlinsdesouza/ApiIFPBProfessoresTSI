@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ApiIFPBProfessoresTSI.api',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'ApiIFPBProfessoresTSI.urls'
@@ -127,9 +129,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# You also need to add the following settings to specify where the uploaded files will be saved and from which URL they can be served:
+# You also need to add the following settings to specify where the uploaded
+# files will be saved and from which URL they can be served:
 
-MEDIA_URL =  '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
@@ -137,6 +140,8 @@ STATIC_DIRS = (
     os.path.join(os.path.abspath(os.path.dirname(__file__) + '/..'), 'static'),
 )
 
+# Cors configuration
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
