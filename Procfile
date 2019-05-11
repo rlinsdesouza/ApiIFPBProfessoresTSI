@@ -1,1 +1,1 @@
-web: gunicorn ApiIFPBProfessoresTSI:app --log-file=-
+web: gunicorn ApiIFPBProfessoresTSI.wsgi --log-file=-
