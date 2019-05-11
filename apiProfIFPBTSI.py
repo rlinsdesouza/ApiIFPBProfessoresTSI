@@ -8,16 +8,16 @@
 # #     return 'Hello World!'
 
 
-[[source]]
-url = "https://pypi.python.org/simple"
-verify_ssl = true
+# [[source]]
+# url = "https://pypi.python.org/simple"
+# verify_ssl = true
 
-[packages]
-dj-database-url = "*"
-django = "*"
-gunicorn = "*"
-psycopg2 = "*"
-whitenoise = "*"
+# [packages]
+# dj-database-url = "*"
+# django = "*"
+# gunicorn = "*"
+# psycopg2 = "*"
+# whitenoise = "*"
 
 # [requires]
 # python_version = "3.4.3"

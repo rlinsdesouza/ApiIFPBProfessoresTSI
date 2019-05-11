@@ -1,1 +1,1 @@
-web: gunicorn apiprofessoresifpbtsi:app --log-file=-
+web: gunicorn ApiIFPBProfessoresTSI:app --log-file=-
