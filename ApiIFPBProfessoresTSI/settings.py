@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
+import cloudinary
 from decouple import config
 from dj_database_url import parse as dburl
 import django_heroku
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'ApiIFPBProfessoresTSI.api',
     'rest_framework',
     'corsheaders',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +148,10 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
 TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+
+# Cloudinary configuration
+cloudinary.config(
+    cloud_name=config('CLOUD_NAME'),
+    api_key=config('API_KEY'),
+    api_secret=config('API_SECRET')
+)
