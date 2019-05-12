@@ -7,3 +7,4 @@ ApiIFPBProfessoresTSI/__pycache__/
 media/
 .vscode/
 env/
+.staticfiles/
